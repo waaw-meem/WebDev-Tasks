@@ -9,6 +9,7 @@ import { WeatherService } from './weather.service';
 export class UserComponent implements OnInit {
   userInput: string = ''; 
   weatherData: any;
+movieData: any;
 
   getUserName(userAttr:string){
     this.userInput = userAttr

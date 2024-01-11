@@ -7,18 +7,20 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 
 import { WeatherService } from './user/weather.service';
+import { MovieFilterComponent } from './movie-filter/movie-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    MovieFilterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService,MovieFilterComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
