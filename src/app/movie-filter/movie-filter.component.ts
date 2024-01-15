@@ -9,7 +9,7 @@ import { MovieDataService } from './movie-data.service';
 })
 export class MovieFilterComponent implements OnInit {
 
-  movieData: any;
+  movieData: any;  
 
   constructor(private displayAll: MovieDataService) {}
 
@@ -17,10 +17,15 @@ export class MovieFilterComponent implements OnInit {
     this.getData();
   }
 
+
+
   getData() {
     this.displayAll.getAllMovies().subscribe(
       (data) => {
-        this.movieData = data;
+        // this.movieObject = data
+        this.movieData = data.results;
+
+        // console.log(this.movieObject)
         console.log(this.movieData);
       },
     );

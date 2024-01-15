@@ -11,7 +11,7 @@ export class MovieDataService {
   constructor(private http: HttpClient) {}
 
   getAllMovies(): Observable<any> {
-    const apiUrl = `https://api.themoviedb.org/3/movie/157336?api_key=${this.apiKey}`;
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${this.apiKey}`;
     return this.http.get(apiUrl);
   }
 }
