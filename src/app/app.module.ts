@@ -8,12 +8,14 @@ import { UserComponent } from './user/user.component';
 
 import { WeatherService } from './user/weather.service';
 import { MovieFilterComponent } from './movie-filter/movie-filter.component';
+import { MovieDetailComponent } from './movie-filter/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    MovieFilterComponent
+    MovieFilterComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
