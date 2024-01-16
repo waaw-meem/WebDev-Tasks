@@ -30,4 +30,13 @@ export class MovieFilterComponent implements OnInit {
       },
     );
   }
+
+  getMovieName(event: Event){
+    const inputValue = (event.target as HTMLInputElement).value;
+    console.log(inputValue)
+
+    if(inputValue == this.movieData.original_title){
+      alert('Working')
+    }
+  }
 }

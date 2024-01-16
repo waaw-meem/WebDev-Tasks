@@ -1,9 +1,17 @@
-<div class="card-grid-container" *ngFor="let singleMovie of movieData">
-  <div class="card" style="width: 18rem;">
+<form action="#">
+  <div class="form-group">
+    <label for="search">Search Movies</label>
+    <input type="text" placeholder="Enter Movie Name" (input)="getMovieName($event)"/>
+  </div>
+</form>
+
+
+<div class="card-grid-containers">
+  <div class="card-item" style="width: 18rem;" *ngFor="let singleMovie of movieData">
     <img src="{{singleMovie.backdrop_path}}" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">{{singleMovie.original_title}}</h5>
+      <p class="card-text">{{singleMovie.overview}}</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>

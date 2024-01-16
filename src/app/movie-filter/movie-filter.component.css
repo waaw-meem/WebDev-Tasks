@@ -1,0 +1,27 @@
+.card-grid-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 25px;
+    margin-top: 25px;
+}
+
+.card-item{
+    border: 1px solid #333;
+}
+
+p.card-text {
+    margin: 0;
+    -webkit-line-clamp: 2;
+    min-height: 0;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 1; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
