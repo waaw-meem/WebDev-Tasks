@@ -1,7 +1,8 @@
 <form action="#">
   <div class="form-group">
     <label for="search">Search Movies</label>
-    <input type="text" placeholder="Enter Movie Name" (input)="getMovieName($event)"/>
+    <input type="text" placeholder="Enter Movie Name" #inputSearchValue/>
+    <button (click)="getMovieName()">Search</button>
   </div>
 </form>
 

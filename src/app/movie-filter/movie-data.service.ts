@@ -18,7 +18,9 @@ export class MovieDataService {
 
 
   userSearch():Observable<any>{
-    const searchAPIURL = 'https://api.themoviedb.org/3/search/movie?api_key=c26621a7b5171ebc92b8247253449198&language=en-US&query=all&page=1&include_adult=false'
+    const searchAPIURL = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=all&page=1&include_adult=false`;
     return this.http.get(searchAPIURL)
   }
+
+  
 }
