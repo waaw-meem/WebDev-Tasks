@@ -4,18 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './String Interpolation/user/user.component';
 
-import { WeatherService } from './user/weather.service';
-import { MovieFilterComponent } from './movie-filter/movie-filter.component';
-import { MovieDetailComponent } from './movie-filter/movie-detail/movie-detail.component';
+import { WeatherService } from './String Interpolation/user/weather.service';
+import { MovieFilterComponent } from './String Interpolation/movie-filter/movie-filter.component';
+import { ImageGalleryComponent } from './Property-Binding/image-gallery/image-gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     MovieFilterComponent,
-    MovieDetailComponent
+    ImageGalleryComponent,
+
   ],
   imports: [
     BrowserModule,

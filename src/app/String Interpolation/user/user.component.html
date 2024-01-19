@@ -1,0 +1,45 @@
+<label for="uname">
+    Enter your Name:
+</label>
+<input type="text" [(ngModel)]="userInput"/>
+<br>
+<p>Welcome {{userInput}}</p>
+
+<!--------  User Form ------------>
+<form action="#">
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" placeholder="Enter the name" #firstName>
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="text" placeholder="Enter the name" #lastName>
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" placeholder="Enter the name" #userAge>
+  </div>
+  <button (click)="addUser()">Add Data</button>
+</form>
+<br><br><br>
+<table border="1">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.firstNameValue}}</td>
+    <td>{{user.lastNameValue}}</td>
+    <td>{{user.userAgeValue}}</td>
+  </tr>
+</table>
+
+<br><br><br>
+<h1>Weather Forecast</h1>
+<div *ngIf="weatherData">
+  <p>Location: {{ weatherData.location.name }}, {{ weatherData.location.country }}</p>
+  <p>Temperature: {{ weatherData.current.temp_c }}°C</p>
+  <p>Weather: {{ weatherData.current.condition.text }}</p>
+</div>
+

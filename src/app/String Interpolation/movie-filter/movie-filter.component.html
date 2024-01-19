@@ -1,0 +1,28 @@
+<!-- movie-filter.component.html -->
+
+<form action="#">
+  <div class="form-group">
+    <label for="search">Search Movies</label>
+    <input type="text" placeholder="Enter Movie Name" #inputSearchValue />
+    <button (click)="getData()">Search</button>
+  </div>
+</form>
+
+<div class="card-grid-containers">
+  <div
+    class="card-item"
+    style="width: 18rem;"
+    *ngFor="let singleMovie of filteredMovies"
+  >
+    <img
+      src="{{ singleMovie.backdrop_path }}"
+      class="card-img-top"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ singleMovie.original_title }}</h5>
+      <p class="card-text">{{ singleMovie.overview }}</p>
+      <a href="#" class="btn btn-primary" (click)="showDetail(singleMovie)">View Detail</a>
+    </div>
+  </div>
+</div>
+
