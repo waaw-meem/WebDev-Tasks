@@ -1,0 +1,15 @@
+.product-container {
+    background: #fff;
+    box-shadow: 0 0 10px #0001;
+    overflow: hidden;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 40px;
+}
+
+.flex-col-wrapper .col-item img{
+    width: 130px;
+}

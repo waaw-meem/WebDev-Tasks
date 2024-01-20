@@ -1,0 +1,17 @@
+<div class="card-container">
+    <div class="product-container" *ngFor="let product of productDetail">
+       <app-product-detail
+          [productName]="product.name"
+          [productPrice]="product.price"
+          [productDescription]="product.description"
+       ></app-product-detail>
+       <button (click)="onSelectProduct(product)">Click for More</button>
+    </div>
+ </div>
+<br>
+ <div class="content" *ngIf="showSpecificInfo">
+    <p>{{selectedProduct.name}}</p>
+    <p>{{selectedProduct.price}}</p>
+    <p>{{selectedProduct.description}}</p>
+ </div>
+ 
