@@ -1,0 +1,13 @@
+<input type="text" placeholder="Enter Item" #itemName/>
+<button (click)="addItem()">Add</button>
+
+<table border="1">
+    <tr>
+        <th>Item</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of todoList; let i = index">
+        <td>{{item.userItemName}}</td>
+        <td><button (click)="removeItem(i)">Remove</button></td>
+    </tr>
+</table>

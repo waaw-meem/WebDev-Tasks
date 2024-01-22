@@ -1,0 +1,24 @@
+<div style="width: 800px;">
+    <canvas #acquisitionsCanvas id="acquisitions"></canvas>
+  </div>
+  
+  <form action="#">
+    <div class="form-group">
+      <label for="primaryYear"></label>
+      <input type="number" placeholder="Enter primary-year" #primaryYears>
+    </div>
+    <div class="form-group">
+      <label for="primaryData"></label>
+      <input type="number" placeholder="data" #primaryDatas>
+    </div>
+    <div class="form-group">
+      <label for="secondaryYear"></label>
+      <input type="number" placeholder="Enter secondary-year" #secondaryYears>
+    </div>
+    <div class="form-group">
+      <label for="secondaryData"></label>
+      <input type="number" placeholder="data" #secondaryDatas>
+    </div>
+    <button (click)="updateChart(primaryYears.value, primaryDatas.value, secondaryYears.value, secondaryDatas.value)">Enter</button>
+  </form>
+  
